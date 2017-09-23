@@ -4,7 +4,7 @@
 #
 Name     : perl-libwww-perl
 Version  : 6.15
-Release  : 16
+Release  : 17
 URL      : http://www.cpan.org/CPAN/authors/id/E/ET/ETHER/libwww-perl-6.15.tar.gz
 Source0  : http://www.cpan.org/CPAN/authors/id/E/ET/ETHER/libwww-perl-6.15.tar.gz
 Summary  : 'The World-Wide Web library for Perl'
@@ -93,31 +93,31 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/site_perl/5.26.0/LWP.pm
-/usr/lib/perl5/site_perl/5.26.0/LWP/Authen/Basic.pm
-/usr/lib/perl5/site_perl/5.26.0/LWP/Authen/Digest.pm
-/usr/lib/perl5/site_perl/5.26.0/LWP/Authen/Ntlm.pm
-/usr/lib/perl5/site_perl/5.26.0/LWP/ConnCache.pm
-/usr/lib/perl5/site_perl/5.26.0/LWP/Debug.pm
-/usr/lib/perl5/site_perl/5.26.0/LWP/DebugFile.pm
-/usr/lib/perl5/site_perl/5.26.0/LWP/MemberMixin.pm
-/usr/lib/perl5/site_perl/5.26.0/LWP/Protocol.pm
-/usr/lib/perl5/site_perl/5.26.0/LWP/Protocol/GHTTP.pm
-/usr/lib/perl5/site_perl/5.26.0/LWP/Protocol/cpan.pm
-/usr/lib/perl5/site_perl/5.26.0/LWP/Protocol/data.pm
-/usr/lib/perl5/site_perl/5.26.0/LWP/Protocol/file.pm
-/usr/lib/perl5/site_perl/5.26.0/LWP/Protocol/ftp.pm
-/usr/lib/perl5/site_perl/5.26.0/LWP/Protocol/gopher.pm
-/usr/lib/perl5/site_perl/5.26.0/LWP/Protocol/http.pm
-/usr/lib/perl5/site_perl/5.26.0/LWP/Protocol/loopback.pm
-/usr/lib/perl5/site_perl/5.26.0/LWP/Protocol/mailto.pm
-/usr/lib/perl5/site_perl/5.26.0/LWP/Protocol/nntp.pm
-/usr/lib/perl5/site_perl/5.26.0/LWP/Protocol/nogo.pm
-/usr/lib/perl5/site_perl/5.26.0/LWP/RobotUA.pm
-/usr/lib/perl5/site_perl/5.26.0/LWP/Simple.pm
-/usr/lib/perl5/site_perl/5.26.0/LWP/UserAgent.pm
-/usr/lib/perl5/site_perl/5.26.0/lwpcook.pod
-/usr/lib/perl5/site_perl/5.26.0/lwptut.pod
+/usr/lib/perl5/site_perl/5.26.1/LWP.pm
+/usr/lib/perl5/site_perl/5.26.1/LWP/Authen/Basic.pm
+/usr/lib/perl5/site_perl/5.26.1/LWP/Authen/Digest.pm
+/usr/lib/perl5/site_perl/5.26.1/LWP/Authen/Ntlm.pm
+/usr/lib/perl5/site_perl/5.26.1/LWP/ConnCache.pm
+/usr/lib/perl5/site_perl/5.26.1/LWP/Debug.pm
+/usr/lib/perl5/site_perl/5.26.1/LWP/DebugFile.pm
+/usr/lib/perl5/site_perl/5.26.1/LWP/MemberMixin.pm
+/usr/lib/perl5/site_perl/5.26.1/LWP/Protocol.pm
+/usr/lib/perl5/site_perl/5.26.1/LWP/Protocol/GHTTP.pm
+/usr/lib/perl5/site_perl/5.26.1/LWP/Protocol/cpan.pm
+/usr/lib/perl5/site_perl/5.26.1/LWP/Protocol/data.pm
+/usr/lib/perl5/site_perl/5.26.1/LWP/Protocol/file.pm
+/usr/lib/perl5/site_perl/5.26.1/LWP/Protocol/ftp.pm
+/usr/lib/perl5/site_perl/5.26.1/LWP/Protocol/gopher.pm
+/usr/lib/perl5/site_perl/5.26.1/LWP/Protocol/http.pm
+/usr/lib/perl5/site_perl/5.26.1/LWP/Protocol/loopback.pm
+/usr/lib/perl5/site_perl/5.26.1/LWP/Protocol/mailto.pm
+/usr/lib/perl5/site_perl/5.26.1/LWP/Protocol/nntp.pm
+/usr/lib/perl5/site_perl/5.26.1/LWP/Protocol/nogo.pm
+/usr/lib/perl5/site_perl/5.26.1/LWP/RobotUA.pm
+/usr/lib/perl5/site_perl/5.26.1/LWP/Simple.pm
+/usr/lib/perl5/site_perl/5.26.1/LWP/UserAgent.pm
+/usr/lib/perl5/site_perl/5.26.1/lwpcook.pod
+/usr/lib/perl5/site_perl/5.26.1/lwptut.pod
 
 %files bin
 %defattr(-,root,root,-)
