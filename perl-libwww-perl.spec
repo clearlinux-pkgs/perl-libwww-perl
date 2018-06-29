@@ -4,7 +4,7 @@
 #
 Name     : perl-libwww-perl
 Version  : 6.34
-Release  : 20
+Release  : 21
 URL      : http://www.cpan.org/CPAN/authors/id/E/ET/ETHER/libwww-perl-6.34.tar.gz
 Source0  : http://www.cpan.org/CPAN/authors/id/E/ET/ETHER/libwww-perl-6.34.tar.gz
 Summary  : 'The World-Wide Web library for Perl'
