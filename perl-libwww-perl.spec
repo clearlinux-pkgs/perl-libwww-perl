@@ -4,15 +4,16 @@
 #
 Name     : perl-libwww-perl
 Version  : 6.35
-Release  : 24
+Release  : 25
 URL      : http://www.cpan.org/CPAN/authors/id/E/ET/ETHER/libwww-perl-6.35.tar.gz
 Source0  : http://www.cpan.org/CPAN/authors/id/E/ET/ETHER/libwww-perl-6.35.tar.gz
 Summary  : 'The World-Wide Web library for Perl'
 Group    : Development/Tools
 License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
-Requires: perl-libwww-perl-bin
-Requires: perl-libwww-perl-license
-Requires: perl-libwww-perl-man
+Requires: perl-libwww-perl-bin = %{version}-%{release}
+Requires: perl-libwww-perl-license = %{version}-%{release}
+Requires: perl-libwww-perl-man = %{version}-%{release}
+BuildRequires : buildreq-cpan
 BuildRequires : perl(Encode::Locale)
 BuildRequires : perl(File::Listing)
 BuildRequires : perl(HTML::Entities)
@@ -43,11 +44,21 @@ LWP::UserAgent.
 %package bin
 Summary: bin components for the perl-libwww-perl package.
 Group: Binaries
-Requires: perl-libwww-perl-license
-Requires: perl-libwww-perl-man
+Requires: perl-libwww-perl-license = %{version}-%{release}
+Requires: perl-libwww-perl-man = %{version}-%{release}
 
 %description bin
 bin components for the perl-libwww-perl package.
+
+
+%package dev
+Summary: dev components for the perl-libwww-perl package.
+Group: Development
+Requires: perl-libwww-perl-bin = %{version}-%{release}
+Provides: perl-libwww-perl-devel = %{version}-%{release}
+
+%description dev
+dev components for the perl-libwww-perl package.
 
 
 %package license
@@ -91,12 +102,12 @@ make TEST_VERBOSE=1 test
 
 %install
 rm -rf %{buildroot}
-mkdir -p %{buildroot}/usr/share/doc/perl-libwww-perl
-cp LICENSE %{buildroot}/usr/share/doc/perl-libwww-perl/LICENSE
+mkdir -p %{buildroot}/usr/share/package-licenses/perl-libwww-perl
+cp LICENSE %{buildroot}/usr/share/package-licenses/perl-libwww-perl/LICENSE
 if test -f Makefile.PL; then
-make pure_install PERL_INSTALL_ROOT=%{buildroot}
+make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
-./Build install --installdirs=site --destdir=%{buildroot}
+./Build install --installdirs=vendor --destdir=%{buildroot}
 fi
 find %{buildroot} -type f -name .packlist -exec rm -f {} ';'
 find %{buildroot} -depth -type d -exec rmdir {} 2>/dev/null ';'
@@ -105,31 +116,31 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/site_perl/5.26.1/LWP.pm
-/usr/lib/perl5/site_perl/5.26.1/LWP/Authen/Basic.pm
-/usr/lib/perl5/site_perl/5.26.1/LWP/Authen/Digest.pm
-/usr/lib/perl5/site_perl/5.26.1/LWP/Authen/Ntlm.pm
-/usr/lib/perl5/site_perl/5.26.1/LWP/ConnCache.pm
-/usr/lib/perl5/site_perl/5.26.1/LWP/Debug.pm
-/usr/lib/perl5/site_perl/5.26.1/LWP/Debug/TraceHTTP.pm
-/usr/lib/perl5/site_perl/5.26.1/LWP/DebugFile.pm
-/usr/lib/perl5/site_perl/5.26.1/LWP/MemberMixin.pm
-/usr/lib/perl5/site_perl/5.26.1/LWP/Protocol.pm
-/usr/lib/perl5/site_perl/5.26.1/LWP/Protocol/cpan.pm
-/usr/lib/perl5/site_perl/5.26.1/LWP/Protocol/data.pm
-/usr/lib/perl5/site_perl/5.26.1/LWP/Protocol/file.pm
-/usr/lib/perl5/site_perl/5.26.1/LWP/Protocol/ftp.pm
-/usr/lib/perl5/site_perl/5.26.1/LWP/Protocol/gopher.pm
-/usr/lib/perl5/site_perl/5.26.1/LWP/Protocol/http.pm
-/usr/lib/perl5/site_perl/5.26.1/LWP/Protocol/loopback.pm
-/usr/lib/perl5/site_perl/5.26.1/LWP/Protocol/mailto.pm
-/usr/lib/perl5/site_perl/5.26.1/LWP/Protocol/nntp.pm
-/usr/lib/perl5/site_perl/5.26.1/LWP/Protocol/nogo.pm
-/usr/lib/perl5/site_perl/5.26.1/LWP/RobotUA.pm
-/usr/lib/perl5/site_perl/5.26.1/LWP/Simple.pm
-/usr/lib/perl5/site_perl/5.26.1/LWP/UserAgent.pm
-/usr/lib/perl5/site_perl/5.26.1/libwww/lwpcook.pod
-/usr/lib/perl5/site_perl/5.26.1/libwww/lwptut.pod
+/usr/lib/perl5/vendor_perl/5.26.1/LWP.pm
+/usr/lib/perl5/vendor_perl/5.26.1/LWP/Authen/Basic.pm
+/usr/lib/perl5/vendor_perl/5.26.1/LWP/Authen/Digest.pm
+/usr/lib/perl5/vendor_perl/5.26.1/LWP/Authen/Ntlm.pm
+/usr/lib/perl5/vendor_perl/5.26.1/LWP/ConnCache.pm
+/usr/lib/perl5/vendor_perl/5.26.1/LWP/Debug.pm
+/usr/lib/perl5/vendor_perl/5.26.1/LWP/Debug/TraceHTTP.pm
+/usr/lib/perl5/vendor_perl/5.26.1/LWP/DebugFile.pm
+/usr/lib/perl5/vendor_perl/5.26.1/LWP/MemberMixin.pm
+/usr/lib/perl5/vendor_perl/5.26.1/LWP/Protocol.pm
+/usr/lib/perl5/vendor_perl/5.26.1/LWP/Protocol/cpan.pm
+/usr/lib/perl5/vendor_perl/5.26.1/LWP/Protocol/data.pm
+/usr/lib/perl5/vendor_perl/5.26.1/LWP/Protocol/file.pm
+/usr/lib/perl5/vendor_perl/5.26.1/LWP/Protocol/ftp.pm
+/usr/lib/perl5/vendor_perl/5.26.1/LWP/Protocol/gopher.pm
+/usr/lib/perl5/vendor_perl/5.26.1/LWP/Protocol/http.pm
+/usr/lib/perl5/vendor_perl/5.26.1/LWP/Protocol/loopback.pm
+/usr/lib/perl5/vendor_perl/5.26.1/LWP/Protocol/mailto.pm
+/usr/lib/perl5/vendor_perl/5.26.1/LWP/Protocol/nntp.pm
+/usr/lib/perl5/vendor_perl/5.26.1/LWP/Protocol/nogo.pm
+/usr/lib/perl5/vendor_perl/5.26.1/LWP/RobotUA.pm
+/usr/lib/perl5/vendor_perl/5.26.1/LWP/Simple.pm
+/usr/lib/perl5/vendor_perl/5.26.1/LWP/UserAgent.pm
+/usr/lib/perl5/vendor_perl/5.26.1/libwww/lwpcook.pod
+/usr/lib/perl5/vendor_perl/5.26.1/libwww/lwptut.pod
 
 %files bin
 %defattr(-,root,root,-)
@@ -138,16 +149,8 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 /usr/bin/lwp-mirror
 /usr/bin/lwp-request
 
-%files license
+%files dev
 %defattr(-,root,root,-)
-/usr/share/doc/perl-libwww-perl/LICENSE
-
-%files man
-%defattr(-,root,root,-)
-/usr/share/man/man1/lwp-download.1
-/usr/share/man/man1/lwp-dump.1
-/usr/share/man/man1/lwp-mirror.1
-/usr/share/man/man1/lwp-request.1
 /usr/share/man/man3/LWP.3
 /usr/share/man/man3/LWP::Authen::Ntlm.3
 /usr/share/man/man3/LWP::ConnCache.3
@@ -159,3 +162,14 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 /usr/share/man/man3/LWP::UserAgent.3
 /usr/share/man/man3/libwww::lwpcook.3
 /usr/share/man/man3/libwww::lwptut.3
+
+%files license
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/perl-libwww-perl/LICENSE
+
+%files man
+%defattr(0644,root,root,0755)
+/usr/share/man/man1/lwp-download.1
+/usr/share/man/man1/lwp-dump.1
+/usr/share/man/man1/lwp-mirror.1
+/usr/share/man/man1/lwp-request.1
