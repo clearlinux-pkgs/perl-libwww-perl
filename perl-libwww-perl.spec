@@ -4,7 +4,7 @@
 #
 Name     : perl-libwww-perl
 Version  : 6.39
-Release  : 40
+Release  : 41
 URL      : https://cpan.metacpan.org/authors/id/O/OA/OALDERS/libwww-perl-6.39.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/O/OA/OALDERS/libwww-perl-6.39.tar.gz
 Summary  : 'The World-Wide Web library for Perl'
@@ -13,6 +13,10 @@ License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
 Requires: perl-libwww-perl-bin = %{version}-%{release}
 Requires: perl-libwww-perl-license = %{version}-%{release}
 Requires: perl-libwww-perl-man = %{version}-%{release}
+Requires: perl(HTTP::Date)
+Requires: perl(HTTP::Request)
+Requires: perl(Try::Tiny)
+Requires: perl(URI)
 BuildRequires : buildreq-cpan
 BuildRequires : perl(Encode::Locale)
 BuildRequires : perl(File::Listing)
