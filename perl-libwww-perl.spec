@@ -4,7 +4,7 @@
 #
 Name     : perl-libwww-perl
 Version  : 6.39
-Release  : 41
+Release  : 42
 URL      : https://cpan.metacpan.org/authors/id/O/OA/OALDERS/libwww-perl-6.39.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/O/OA/OALDERS/libwww-perl-6.39.tar.gz
 Summary  : 'The World-Wide Web library for Perl'
@@ -13,11 +13,16 @@ License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
 Requires: perl-libwww-perl-bin = %{version}-%{release}
 Requires: perl-libwww-perl-license = %{version}-%{release}
 Requires: perl-libwww-perl-man = %{version}-%{release}
+Requires: msmtp
+Requires: perl(Authen::NTLM)
 Requires: perl(HTTP::Date)
 Requires: perl(HTTP::Request)
+Requires: perl(Net::HTTP)
 Requires: perl(Try::Tiny)
 Requires: perl(URI)
+Requires: perl(WWW::RobotRules)
 BuildRequires : buildreq-cpan
+BuildRequires : msmtp
 BuildRequires : perl(Encode::Locale)
 BuildRequires : perl(File::Listing)
 BuildRequires : perl(HTML::Entities)
@@ -88,7 +93,7 @@ man components for the perl-libwww-perl package.
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
+export LANG=C.UTF-8
 if test -f Makefile.PL; then
 %{__perl} Makefile.PL
 make  %{?_smp_mflags}
@@ -98,7 +103,7 @@ else
 fi
 
 %check
-export LANG=C
+export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
