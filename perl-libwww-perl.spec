@@ -4,7 +4,7 @@
 #
 Name     : perl-libwww-perl
 Version  : 6.39
-Release  : 42
+Release  : 43
 URL      : https://cpan.metacpan.org/authors/id/O/OA/OALDERS/libwww-perl-6.39.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/O/OA/OALDERS/libwww-perl-6.39.tar.gz
 Summary  : 'The World-Wide Web library for Perl'
@@ -15,6 +15,7 @@ Requires: perl-libwww-perl-license = %{version}-%{release}
 Requires: perl-libwww-perl-man = %{version}-%{release}
 Requires: msmtp
 Requires: perl(Authen::NTLM)
+Requires: perl(Data::Dump)
 Requires: perl(HTTP::Date)
 Requires: perl(HTTP::Request)
 Requires: perl(Net::HTTP)
