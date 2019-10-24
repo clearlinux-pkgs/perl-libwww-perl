@@ -4,16 +4,16 @@
 #
 Name     : perl-libwww-perl
 Version  : 6.40
-Release  : 44
+Release  : 45
 URL      : https://cpan.metacpan.org/authors/id/O/OA/OALDERS/libwww-perl-6.40.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/O/OA/OALDERS/libwww-perl-6.40.tar.gz
 Summary  : 'The World-Wide Web library for Perl'
 Group    : Development/Tools
 License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
 Requires: perl-libwww-perl-bin = %{version}-%{release}
-Requires: perl-libwww-perl-data = %{version}-%{release}
 Requires: perl-libwww-perl-license = %{version}-%{release}
 Requires: perl-libwww-perl-man = %{version}-%{release}
+Requires: perl-libwww-perl-perl = %{version}-%{release}
 Requires: msmtp
 Requires: perl(Authen::NTLM)
 Requires: perl(Data::Dump)
@@ -55,26 +55,16 @@ LWP::UserAgent.
 %package bin
 Summary: bin components for the perl-libwww-perl package.
 Group: Binaries
-Requires: perl-libwww-perl-data = %{version}-%{release}
 Requires: perl-libwww-perl-license = %{version}-%{release}
 
 %description bin
 bin components for the perl-libwww-perl package.
 
 
-%package data
-Summary: data components for the perl-libwww-perl package.
-Group: Data
-
-%description data
-data components for the perl-libwww-perl package.
-
-
 %package dev
 Summary: dev components for the perl-libwww-perl package.
 Group: Development
 Requires: perl-libwww-perl-bin = %{version}-%{release}
-Requires: perl-libwww-perl-data = %{version}-%{release}
 Provides: perl-libwww-perl-devel = %{version}-%{release}
 Requires: perl-libwww-perl = %{version}-%{release}
 
@@ -96,6 +86,15 @@ Group: Default
 
 %description man
 man components for the perl-libwww-perl package.
+
+
+%package perl
+Summary: perl components for the perl-libwww-perl package.
+Group: Default
+Requires: perl-libwww-perl = %{version}-%{release}
+
+%description perl
+perl components for the perl-libwww-perl package.
 
 
 %prep
@@ -145,7 +144,32 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 /usr/bin/lwp-mirror
 /usr/bin/lwp-request
 
-%files data
+%files dev
+%defattr(-,root,root,-)
+/usr/share/man/man3/LWP.3
+/usr/share/man/man3/LWP::Authen::Ntlm.3
+/usr/share/man/man3/LWP::ConnCache.3
+/usr/share/man/man3/LWP::Debug.3
+/usr/share/man/man3/LWP::MemberMixin.3
+/usr/share/man/man3/LWP::Protocol.3
+/usr/share/man/man3/LWP::RobotUA.3
+/usr/share/man/man3/LWP::Simple.3
+/usr/share/man/man3/LWP::UserAgent.3
+/usr/share/man/man3/libwww::lwpcook.3
+/usr/share/man/man3/libwww::lwptut.3
+
+%files license
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/perl-libwww-perl/e9330dd55cc5b12a4e89bca611863182e2acf7d1
+
+%files man
+%defattr(0644,root,root,0755)
+/usr/share/man/man1/lwp-download.1
+/usr/share/man/man1/lwp-dump.1
+/usr/share/man/man1/lwp-mirror.1
+/usr/share/man/man1/lwp-request.1
+
+%files perl
 %defattr(-,root,root,-)
 /usr/lib/perl5/vendor_perl/5.28.2/LWP.pm
 /usr/lib/perl5/vendor_perl/5.28.2/LWP/Authen/Basic.pm
@@ -172,28 +196,3 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 /usr/lib/perl5/vendor_perl/5.28.2/LWP/UserAgent.pm
 /usr/lib/perl5/vendor_perl/5.28.2/libwww/lwpcook.pod
 /usr/lib/perl5/vendor_perl/5.28.2/libwww/lwptut.pod
-
-%files dev
-%defattr(-,root,root,-)
-/usr/share/man/man3/LWP.3
-/usr/share/man/man3/LWP::Authen::Ntlm.3
-/usr/share/man/man3/LWP::ConnCache.3
-/usr/share/man/man3/LWP::Debug.3
-/usr/share/man/man3/LWP::MemberMixin.3
-/usr/share/man/man3/LWP::Protocol.3
-/usr/share/man/man3/LWP::RobotUA.3
-/usr/share/man/man3/LWP::Simple.3
-/usr/share/man/man3/LWP::UserAgent.3
-/usr/share/man/man3/libwww::lwpcook.3
-/usr/share/man/man3/libwww::lwptut.3
-
-%files license
-%defattr(0644,root,root,0755)
-/usr/share/package-licenses/perl-libwww-perl/e9330dd55cc5b12a4e89bca611863182e2acf7d1
-
-%files man
-%defattr(0644,root,root,0755)
-/usr/share/man/man1/lwp-download.1
-/usr/share/man/man1/lwp-dump.1
-/usr/share/man/man1/lwp-mirror.1
-/usr/share/man/man1/lwp-request.1
