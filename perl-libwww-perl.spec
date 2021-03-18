@@ -4,7 +4,7 @@
 #
 Name     : perl-libwww-perl
 Version  : 6.53
-Release  : 61
+Release  : 62
 URL      : https://cpan.metacpan.org/authors/id/O/OA/OALDERS/libwww-perl-6.53.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/O/OA/OALDERS/libwww-perl-6.53.tar.gz
 Summary  : 'The World-Wide Web library for Perl'
@@ -172,28 +172,28 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.3/LWP.pm
-/usr/lib/perl5/vendor_perl/5.30.3/LWP/Authen/Basic.pm
-/usr/lib/perl5/vendor_perl/5.30.3/LWP/Authen/Digest.pm
-/usr/lib/perl5/vendor_perl/5.30.3/LWP/Authen/Ntlm.pm
-/usr/lib/perl5/vendor_perl/5.30.3/LWP/ConnCache.pm
-/usr/lib/perl5/vendor_perl/5.30.3/LWP/Debug.pm
-/usr/lib/perl5/vendor_perl/5.30.3/LWP/Debug/TraceHTTP.pm
-/usr/lib/perl5/vendor_perl/5.30.3/LWP/DebugFile.pm
-/usr/lib/perl5/vendor_perl/5.30.3/LWP/MemberMixin.pm
-/usr/lib/perl5/vendor_perl/5.30.3/LWP/Protocol.pm
-/usr/lib/perl5/vendor_perl/5.30.3/LWP/Protocol/cpan.pm
-/usr/lib/perl5/vendor_perl/5.30.3/LWP/Protocol/data.pm
-/usr/lib/perl5/vendor_perl/5.30.3/LWP/Protocol/file.pm
-/usr/lib/perl5/vendor_perl/5.30.3/LWP/Protocol/ftp.pm
-/usr/lib/perl5/vendor_perl/5.30.3/LWP/Protocol/gopher.pm
-/usr/lib/perl5/vendor_perl/5.30.3/LWP/Protocol/http.pm
-/usr/lib/perl5/vendor_perl/5.30.3/LWP/Protocol/loopback.pm
-/usr/lib/perl5/vendor_perl/5.30.3/LWP/Protocol/mailto.pm
-/usr/lib/perl5/vendor_perl/5.30.3/LWP/Protocol/nntp.pm
-/usr/lib/perl5/vendor_perl/5.30.3/LWP/Protocol/nogo.pm
-/usr/lib/perl5/vendor_perl/5.30.3/LWP/RobotUA.pm
-/usr/lib/perl5/vendor_perl/5.30.3/LWP/Simple.pm
-/usr/lib/perl5/vendor_perl/5.30.3/LWP/UserAgent.pm
-/usr/lib/perl5/vendor_perl/5.30.3/libwww/lwpcook.pod
-/usr/lib/perl5/vendor_perl/5.30.3/libwww/lwptut.pod
+/usr/lib/perl5/vendor_perl/5.32.1/LWP.pm
+/usr/lib/perl5/vendor_perl/5.32.1/LWP/Authen/Basic.pm
+/usr/lib/perl5/vendor_perl/5.32.1/LWP/Authen/Digest.pm
+/usr/lib/perl5/vendor_perl/5.32.1/LWP/Authen/Ntlm.pm
+/usr/lib/perl5/vendor_perl/5.32.1/LWP/ConnCache.pm
+/usr/lib/perl5/vendor_perl/5.32.1/LWP/Debug.pm
+/usr/lib/perl5/vendor_perl/5.32.1/LWP/Debug/TraceHTTP.pm
+/usr/lib/perl5/vendor_perl/5.32.1/LWP/DebugFile.pm
+/usr/lib/perl5/vendor_perl/5.32.1/LWP/MemberMixin.pm
+/usr/lib/perl5/vendor_perl/5.32.1/LWP/Protocol.pm
+/usr/lib/perl5/vendor_perl/5.32.1/LWP/Protocol/cpan.pm
+/usr/lib/perl5/vendor_perl/5.32.1/LWP/Protocol/data.pm
+/usr/lib/perl5/vendor_perl/5.32.1/LWP/Protocol/file.pm
+/usr/lib/perl5/vendor_perl/5.32.1/LWP/Protocol/ftp.pm
+/usr/lib/perl5/vendor_perl/5.32.1/LWP/Protocol/gopher.pm
+/usr/lib/perl5/vendor_perl/5.32.1/LWP/Protocol/http.pm
+/usr/lib/perl5/vendor_perl/5.32.1/LWP/Protocol/loopback.pm
+/usr/lib/perl5/vendor_perl/5.32.1/LWP/Protocol/mailto.pm
+/usr/lib/perl5/vendor_perl/5.32.1/LWP/Protocol/nntp.pm
+/usr/lib/perl5/vendor_perl/5.32.1/LWP/Protocol/nogo.pm
+/usr/lib/perl5/vendor_perl/5.32.1/LWP/RobotUA.pm
+/usr/lib/perl5/vendor_perl/5.32.1/LWP/Simple.pm
+/usr/lib/perl5/vendor_perl/5.32.1/LWP/UserAgent.pm
+/usr/lib/perl5/vendor_perl/5.32.1/libwww/lwpcook.pod
+/usr/lib/perl5/vendor_perl/5.32.1/libwww/lwptut.pod
