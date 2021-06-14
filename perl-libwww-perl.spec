@@ -4,7 +4,7 @@
 #
 Name     : perl-libwww-perl
 Version  : 6.54
-Release  : 70
+Release  : 71
 URL      : https://cpan.metacpan.org/authors/id/O/OA/OALDERS/libwww-perl-6.54.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/O/OA/OALDERS/libwww-perl-6.54.tar.gz
 Summary  : 'The World-Wide Web library for Perl'
@@ -19,6 +19,7 @@ Requires: perl(Authen::NTLM)
 Requires: perl(Data::Dump)
 Requires: perl(HTTP::Date)
 Requires: perl(HTTP::Request)
+Requires: perl(LWP::MediaTypes)
 Requires: perl(Net::HTTP)
 Requires: perl(Try::Tiny)
 Requires: perl(URI)
@@ -119,7 +120,7 @@ export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-make TEST_VERBOSE=1 test || :
+make TEST_VERBOSE=1 test
 
 %install
 rm -rf %{buildroot}

@@ -1,11 +1,12 @@
 # This file contains additional runtime requirements that did not get
 # picked up automatically. One name per line, no whitespace.
+msmtp
 perl(Authen::NTLM)
 perl(Data::Dump)
 perl(HTTP::Date)
 perl(HTTP::Request)
+perl(LWP::MediaTypes)
 perl(Net::HTTP)
 perl(Try::Tiny)
 perl(URI)
 perl(WWW::RobotRules)
-msmtp
