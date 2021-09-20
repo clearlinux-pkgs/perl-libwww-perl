@@ -1,5 +1,5 @@
 PKG_NAME := perl-libwww-perl
-URL = https://cpan.metacpan.org/authors/id/O/OA/OALDERS/libwww-perl-6.56.tar.gz
+URL = https://cpan.metacpan.org/authors/id/O/OA/OALDERS/libwww-perl-6.57.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
