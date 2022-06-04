@@ -4,7 +4,7 @@
 #
 Name     : perl-libwww-perl
 Version  : 6.66
-Release  : 82
+Release  : 83
 URL      : https://cpan.metacpan.org/authors/id/O/OA/OALDERS/libwww-perl-6.66.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/O/OA/OALDERS/libwww-perl-6.66.tar.gz
 Summary  : 'The World-Wide Web library for Perl'
@@ -172,28 +172,4 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.34.0/LWP.pm
-/usr/lib/perl5/vendor_perl/5.34.0/LWP/Authen/Basic.pm
-/usr/lib/perl5/vendor_perl/5.34.0/LWP/Authen/Digest.pm
-/usr/lib/perl5/vendor_perl/5.34.0/LWP/Authen/Ntlm.pm
-/usr/lib/perl5/vendor_perl/5.34.0/LWP/ConnCache.pm
-/usr/lib/perl5/vendor_perl/5.34.0/LWP/Debug.pm
-/usr/lib/perl5/vendor_perl/5.34.0/LWP/Debug/TraceHTTP.pm
-/usr/lib/perl5/vendor_perl/5.34.0/LWP/DebugFile.pm
-/usr/lib/perl5/vendor_perl/5.34.0/LWP/MemberMixin.pm
-/usr/lib/perl5/vendor_perl/5.34.0/LWP/Protocol.pm
-/usr/lib/perl5/vendor_perl/5.34.0/LWP/Protocol/cpan.pm
-/usr/lib/perl5/vendor_perl/5.34.0/LWP/Protocol/data.pm
-/usr/lib/perl5/vendor_perl/5.34.0/LWP/Protocol/file.pm
-/usr/lib/perl5/vendor_perl/5.34.0/LWP/Protocol/ftp.pm
-/usr/lib/perl5/vendor_perl/5.34.0/LWP/Protocol/gopher.pm
-/usr/lib/perl5/vendor_perl/5.34.0/LWP/Protocol/http.pm
-/usr/lib/perl5/vendor_perl/5.34.0/LWP/Protocol/loopback.pm
-/usr/lib/perl5/vendor_perl/5.34.0/LWP/Protocol/mailto.pm
-/usr/lib/perl5/vendor_perl/5.34.0/LWP/Protocol/nntp.pm
-/usr/lib/perl5/vendor_perl/5.34.0/LWP/Protocol/nogo.pm
-/usr/lib/perl5/vendor_perl/5.34.0/LWP/RobotUA.pm
-/usr/lib/perl5/vendor_perl/5.34.0/LWP/Simple.pm
-/usr/lib/perl5/vendor_perl/5.34.0/LWP/UserAgent.pm
-/usr/lib/perl5/vendor_perl/5.34.0/lwpcook.pod
-/usr/lib/perl5/vendor_perl/5.34.0/lwptut.pod
+/usr/lib/perl5/*
