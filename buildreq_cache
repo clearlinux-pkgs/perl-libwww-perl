@@ -1,8 +1,9 @@
-6.68
+6.70
 perl(Encode::Locale)
 perl(File::Listing)
 perl(HTML::Entities)
 perl(HTML::HeadParser)
+perl(HTTP::CookieJar::LWP)
 perl(HTTP::Cookies)
 perl(HTTP::Daemon)
 perl(HTTP::Date)
