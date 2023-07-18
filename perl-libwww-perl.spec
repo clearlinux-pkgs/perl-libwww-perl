@@ -4,14 +4,15 @@
 # Using build pattern: cpan
 #
 Name     : perl-libwww-perl
-Version  : 6.71
-Release  : 89
-URL      : https://cpan.metacpan.org/authors/id/O/OA/OALDERS/libwww-perl-6.71.tar.gz
-Source0  : https://cpan.metacpan.org/authors/id/O/OA/OALDERS/libwww-perl-6.71.tar.gz
+Version  : 6.72
+Release  : 90
+URL      : https://cpan.metacpan.org/authors/id/O/OA/OALDERS/libwww-perl-6.72.tar.gz
+Source0  : https://cpan.metacpan.org/authors/id/O/OA/OALDERS/libwww-perl-6.72.tar.gz
 Summary  : 'The World-Wide Web library for Perl'
 Group    : Development/Tools
-License  : Artistic-1.0-Perl
+License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
 Requires: perl-libwww-perl-bin = %{version}-%{release}
+Requires: perl-libwww-perl-license = %{version}-%{release}
 Requires: perl-libwww-perl-man = %{version}-%{release}
 Requires: perl-libwww-perl-perl = %{version}-%{release}
 Requires: msmtp
@@ -59,6 +60,7 @@ LWP::UserAgent.
 %package bin
 Summary: bin components for the perl-libwww-perl package.
 Group: Binaries
+Requires: perl-libwww-perl-license = %{version}-%{release}
 
 %description bin
 bin components for the perl-libwww-perl package.
@@ -73,6 +75,14 @@ Requires: perl-libwww-perl = %{version}-%{release}
 
 %description dev
 dev components for the perl-libwww-perl package.
+
+
+%package license
+Summary: license components for the perl-libwww-perl package.
+Group: Default
+
+%description license
+license components for the perl-libwww-perl package.
 
 
 %package man
@@ -93,10 +103,10 @@ perl components for the perl-libwww-perl package.
 
 
 %prep
-%setup -q -n libwww-perl-6.71
-cd %{_builddir}/libwww-perl-6.71
+%setup -q -n libwww-perl-6.72
+cd %{_builddir}/libwww-perl-6.72
 pushd ..
-cp -a libwww-perl-6.71 buildavx2
+cp -a libwww-perl-6.72 buildavx2
 popd
 
 %build
@@ -121,6 +131,8 @@ make TEST_VERBOSE=1 test
 
 %install
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/package-licenses/perl-libwww-perl
+cp %{_builddir}/libwww-perl-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/perl-libwww-perl/9616d0e8f2fc1985c67e5da6693bdc985f3cd4fc || :
 if test -f Makefile.PL; then
 make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
@@ -155,6 +167,10 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 /usr/share/man/man3/LWP::UserAgent.3
 /usr/share/man/man3/lwpcook.3
 /usr/share/man/man3/lwptut.3
+
+%files license
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/perl-libwww-perl/9616d0e8f2fc1985c67e5da6693bdc985f3cd4fc
 
 %files man
 %defattr(0644,root,root,0755)
