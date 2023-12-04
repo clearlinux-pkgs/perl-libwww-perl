@@ -5,7 +5,7 @@
 #
 Name     : perl-libwww-perl
 Version  : 6.72
-Release  : 92
+Release  : 93
 URL      : https://cpan.metacpan.org/authors/id/O/OA/OALDERS/libwww-perl-6.72.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/O/OA/OALDERS/libwww-perl-6.72.tar.gz
 Summary  : 'The World-Wide Web library for Perl'
