@@ -6,10 +6,10 @@
 # autospec commit: fae1327
 #
 Name     : perl-libwww-perl
-Version  : 6.75
-Release  : 97
-URL      : https://cpan.metacpan.org/authors/id/O/OA/OALDERS/libwww-perl-6.75.tar.gz
-Source0  : https://cpan.metacpan.org/authors/id/O/OA/OALDERS/libwww-perl-6.75.tar.gz
+Version  : 6.76
+Release  : 98
+URL      : https://cpan.metacpan.org/authors/id/O/OA/OALDERS/libwww-perl-6.76.tar.gz
+Source0  : https://cpan.metacpan.org/authors/id/O/OA/OALDERS/libwww-perl-6.76.tar.gz
 Summary  : 'The World-Wide Web library for Perl'
 Group    : Development/Tools
 License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
@@ -105,10 +105,10 @@ perl components for the perl-libwww-perl package.
 
 
 %prep
-%setup -q -n libwww-perl-6.75
-cd %{_builddir}/libwww-perl-6.75
+%setup -q -n libwww-perl-6.76
+cd %{_builddir}/libwww-perl-6.76
 pushd ..
-cp -a libwww-perl-6.75 buildavx2
+cp -a libwww-perl-6.76 buildavx2
 popd
 
 %build
