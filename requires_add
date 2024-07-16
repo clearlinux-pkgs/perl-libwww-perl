@@ -3,6 +3,7 @@
 msmtp
 perl(Authen::NTLM)
 perl(Data::Dump)
+perl(Digest::MD5)
 perl(HTTP::Date)
 perl(HTTP::Request)
 perl(LWP::MediaTypes)
